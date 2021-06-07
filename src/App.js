@@ -1,18 +1,16 @@
-import "./App.css";
-import {useSelector, useDispatch} from 'react-redux'
-import { decrement, increment } from "./Redux/Actions/action";
+//import react from 'react'
+import AddTask from './Components/AddTask/AddTask';
+import ListTask from './Components/ListTask/ListTask';
+import './App.css';
 
 function App() {
-    const value = useSelector((state) => state.count)
-    console.log(value)
-    const dispatch=  useDispatch()
-    return (
-        <div className="App">
-          <button onClick={()=>dispatch(increment)} >+</button> 
-          <h1> count:  {value}</h1> 
-          <button onClick={()=>dispatch(decrement)} >-</button>
-        </div>
-    )
+  return (
+    <div className="App">
+      <h1>  My To Do List </h1>
+    <AddTask/>
+    <ListTask/>
+    </div>
+  );
 }
 
 export default App;
